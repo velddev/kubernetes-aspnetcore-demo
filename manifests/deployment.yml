@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: exampleservice
+  labels:
+    app: exampleservice
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: exampleservice
+  template:
+    metadata:
+      labels:
+        app: exampleservice
+    spec:
+        containers:
+        - name: exampleservice-container
+          image: docker.io/veld/exampleservice:latest
+          resources:
+            limits:
+              memory: "128Mi"
+              cpu: "500m"
+          ports:
+          - containerPort: 80
