@@ -1,4 +1,4 @@
-# Kubernetes + ASP.NET CORE example
+# Kubernetes + ASP.NET Core example
 
 A small repository explaining on how to build docker, kubernetes and asp.net core together. Please follow the set up steps below if you'd like to deploy to your own kubernetes cluster.
 
